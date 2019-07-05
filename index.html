@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Form app</title>
+</head>
+<body>
+    <header>
+        <nav> </nav>
+    </header>
+    <div style="margin-left:15%" id="formDiv" >
+
+        <form action="">
+            <input type="text" id="Ad" name="Ad" required placeholder="Ad">
+            <input type="text" id="soyAd" name="soyAd" placeholder="Soyad">
+            <input type="email" id="email"  name="email" placeholder="Email">
+            <select name="seherler" required="required" id="selectCity">
+                <option value="Seherler" selected="selected" disabled="disabled">Seherler</option>
+                <option value="Baki">Baki</option>
+                <option value="Gence">Gence</option>
+                <option value="Sumqayit">Sumqayit</option>
+                <option value="Quba">Quba</option>
+                <option value="Sheki">Sheki</option>
+                <option value="Lenkeran">Lenkeran</option>
+                <option value="Tovuz">Tovuz</option>
+                <option value="Mingecevir">Mingecevir</option>
+            </select>
+            <button type="button" id="submitBtn">Submit Form</button>
+
+
+
+        </form>
+    </div>
+<!-- style="display: none;" -->
+    <div  id="valueDiv">
+        <table >
+            <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Email</th>
+                <th>Sheher</th>
+                <th>Delete</th>
+            </tr></thead>
+            <tbody id="tableBody">
+                
+        </tbody>
+            
+        </table>
+    
+    </div>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
