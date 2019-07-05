@@ -35,6 +35,30 @@ $("#formDiv").on("click", "#submitBtn", function () {
     $("#email").val("")
 
 
+    
+    var getItems = localStorage.getItem("items")
+    myArray = getItems.split(",")
+
+
+    $(".deletebtn").click(function () {
+        var parent = $(this).parent().parent()
+        parent.remove();
+          var myElement = myArray.find(removable)
+        function removable(a) {
+            return parent.html;
+        }
+       
+      
+        secondArray = myArray.filter(function (item) {
+            return item !== myElement
+        })
+    
+        
+        localStorage.clear()
+        localStorage.setItem("items", secondArray)
+        localStorage.getItem("items")
+   
+    })
 })
 
 $("#selectCity").change(function () {
@@ -44,7 +68,7 @@ $("#selectCity").change(function () {
 var getItems = localStorage.getItem("items")
 myArray = getItems.split(",")
 for (e of myArray) {
-    console.log(e)
+ 
     $("#tableBody").append(e)
 }
 
@@ -55,7 +79,7 @@ var myElement = myArray.find(removable)
     function removable() {
         return parent.html;
     }
-    alert("2")
+  
     
     secondArray= myArray.filter(function (item) {
         return item !== myElement
