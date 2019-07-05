@@ -54,7 +54,7 @@ $("#formDiv").on("click", "#submitBtn", function () {
         })
     
         
-        localStorage.clear()
+      
         localStorage.setItem("items", secondArray)
         localStorage.getItem("items")
    
@@ -85,7 +85,7 @@ var myElement = myArray.find(removable)
         return item !== myElement
     })
 
-localStorage.clear()
+
     localStorage.setItem("items", secondArray)
     localStorage.getItem("items")
   
